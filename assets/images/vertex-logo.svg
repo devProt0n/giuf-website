@@ -1,1 +1,16 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="261.58635" height="331.68694" viewBox="0,0,261.58635,331.68694"><defs><radialGradient cx="206.84255" cy="131.61549" r="144.3113" gradientUnits="userSpaceOnUse" id="color-1"><stop offset="0" stop-color="#fed9ba"/><stop offset="1" stop-color="#eb9a79"/></radialGradient></defs><g transform="translate(-109.20682,-14.15653)"><g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill-rule="nonzero" stroke="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal"><path d="M350.98642,215.39285c0,62.00901 -48.04002,110.64702 -109.26326,110.64702c-61.2125,0 -109.25252,-48.63801 -109.25252,-110.64702c0,-32.72943 13.57157,-78.9525 33.73565,-114.88392c22.49234,-40.08184 50.05522,-63.09161 75.51867,-63.09161c25.46711,0 53.03353,23.00977 75.52768,63.09161c20.16228,35.92961 33.73378,82.15275 33.73378,114.88392z" data-paper-data="{&quot;noHover&quot;:false,&quot;origItem&quot;:[&quot;Path&quot;,{&quot;applyMatrix&quot;:true,&quot;segments&quot;:[[[563.815,268.961],[22.394,40.306],[-24.984,-44.964]],[[479.995,198.211],[28.286,0],[-28.282,0]],[[396.185,268.961],[24.982,-44.964],[-22.396,40.308]],[[358.743,397.735],[0,-36.716],[0,69.562]],[[479.993,521.789],[-67.988,0],[68,0]],[[601.255,397.735],[0,69.562],[0,-36.718]]],&quot;closed&quot;:true,&quot;fillColor&quot;:[0,0,0,1]}]}" fill="url(#color-1)" stroke-width="0.5"/><path d="M370.79318,212.62914c0,35.66598 -13.37884,69.07332 -37.67906,94.06702c-24.54403,25.24447 -57.61586,39.1473 -93.1193,39.1473c-35.5017,0 -68.56664,-13.9029 -93.10894,-39.14904c-24.29674,-24.9937 -37.67906,-58.39931 -37.67906,-94.06529c0,-69.71494 53.9357,-198.47261 130.788,-198.47261c76.86098,0 130.79662,128.75767 130.79836,198.47261zM312.47508,101.27648c-21.60401,-38.88103 -48.02104,-61.17852 -72.48032,-61.17852c-24.45581,0 -50.86936,22.29749 -72.4717,61.17852c-19.36616,34.85486 -32.37661,79.60384 -32.37661,111.35266c0,60.15126 46.05641,107.27122 104.84657,107.27122c58.80052,0 104.85693,-47.11996 104.85693,-107.27122c0,-31.75056 -13.01051,-76.49954 -32.37487,-111.35266z" fill="#000000" stroke-width="1"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225 225" width="100%" height="100%">
+  <!-- Outer Triangle -->
+  <polygon points="112.5,38 200.5,189 24.5,189" fill="none" stroke="white" stroke-width="15" stroke-linejoin="round" />
+  
+  <!-- Top Dash -->
+  <line x1="112.5" y1="82" x2="112.5" y2="109" stroke="white" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Center Y-shape -->
+  <path d="M 112.5,125 L 112.5,137 L 102,143 M 112.5,137 L 123,143" fill="none" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Bottom-Left Dash -->
+  <line x1="84.5" y1="153.5" x2="64.5" y2="165.5" stroke="white" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Bottom-Right Dash -->
+  <line x1="140.5" y1="153.5" x2="160.5" y2="165.5" stroke="white" stroke-width="10" stroke-linecap="round" />
+</svg>

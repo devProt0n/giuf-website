@@ -1613,20 +1613,42 @@ ul { list-style: none; }
   transition: var(--transition);
 }
 /* ── Replace this entire block when real Vertex logo arrives ── */
-.vertex-logo-placeholder:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
-.vertex-logo-placeholder .v-wordmark {
-  font-family: var(--font-ui);
-  font-size: 0.9rem; font-weight: 700;
-  letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.75);
+
+.vertex-brand a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
-.vertex-logo-placeholder .v-icon {
-  width: 20px; height: 20px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--turquoise), var(--navy-mid));
-  display: flex; align-items: center; justify-content: center;
+
+.vertex-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
-.vertex-logo-placeholder .v-icon svg { width: 12px; height: 12px; stroke: var(--white); fill: none; stroke-width: 2.5; }
+
+
+.vertex-logo{
+    height:40px;
+    width:auto;
+    display:block;
+}
+
+
+.vertex-name{
+    font-size:24px;
+    font-weight:700;
+    color:white;
+    line-height:1;
+}
+
+.sponsor-group{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+
 /* ── End Vertex placeholder ── */
 
 .footer-credit {
