@@ -1427,34 +1427,83 @@ ul { list-style: none; }
 }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.32); }
 
-/* ── ANIMATIONS (Güvenli Mod) ───────────────────────── */
+/* =====================================================
+   ANİMASYON STİLLERİ (Scroll Reveal & Hover Effects)
+   ===================================================== */
+
+/* 1. Ekrana Giriş Animasyon Sınıfları */
 .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Eleman ekrana girdiğinde JS bu sınıfı ekler */
+.reveal.active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Sayfa yüklendiğinde tatlı bir kayma efekti için */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Sıralı Geliş (Gecikme) Efektleri */
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+
+/* 2. Rol Kartları Mikro Etkileşimleri */
+.rol-card {
+  /* Zaten tanımlı geçiş sürenizi daha akıcı yapalım */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease !important;
 }
 
-.reveal {
-  animation: fadeInUp 0.8s ease forwards;
+/* Kartın amblemi hover yapılınca parlasın ve hafif büyüsün */
+.rol-card .rol-emblem {
+  transition: transform 0.4s ease, background-color 0.4s ease;
 }
 
-.reveal-delay-1 { animation-delay: 0.15s; }
-.reveal-delay-2 { animation-delay: 0.30s; }
-.reveal-delay-3 { animation-delay: 0.45s; }
-.reveal-delay-4 { animation-delay: 0.60s; }
+.rol-card:hover .rol-emblem {
+  transform: scale(1.1) rotate(4deg);
+}
 
+/* Kart hover olduğunda içindeki ayırıcı çizgi uzasın */
+.rol-card .rol-divider {
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.rol-card:hover .rol-divider {
+  width: 70px;
+}
+
+/* Etiketler (Tags) Hover Efekti */
+.rol-tag {
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.rol-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* 3. Footer Linkleri Animasyon Güncellemesi */
+.footer-links a {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+/* Footer başlığının altındaki çizgiye hover efekti */
+.footer-col:hover .footer-title::after {
+  width: 45px;
+  transition: width 0.3s ease;
+}
+
+.footer-title::after {
+  transition: width 0.3s ease;
+}
 /* =====================================================
    KEYFRAMES
    ===================================================== */
