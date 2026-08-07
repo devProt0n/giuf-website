@@ -419,7 +419,7 @@ ul { list-style: none; }
 }
 .nav-mobile a:hover { color: var(--turquoise); background: rgba(0,180,216,0.05); }
 /* =====================================================
-   HERO
+   HERO - Güncellenmiş & Okunabilirlik Artırılmış
    ===================================================== */
 
 #hero {
@@ -429,6 +429,7 @@ ul { list-style: none; }
   flex-direction: column;
   overflow: hidden;
 }
+
 .hero-bg {
   position: absolute; inset: 0;
   background-image: url('../assets/images/hero-bg.jpg');
@@ -438,18 +439,22 @@ ul { list-style: none; }
   transition: transform 8s ease;
 }
 .hero-bg.loaded { transform: scale(1); }
+
 .hero-overlay {
   position: absolute; inset: 0;
+  /* Alt kısım opaklığı %96'dan %88'e çekilerek metin kontrastı dengelendi */
   background: linear-gradient(
     175deg,
-    rgba(10,35,66,0.78) 0%,
-    rgba(10,35,66,0.58) 40%,
-    rgba(10,35,66,0.82) 78%,
-    rgba(10,35,66,0.96) 100%
+    rgba(10,35,66,0.82) 0%,
+    rgba(10,35,66,0.65) 40%,
+    rgba(10,35,66,0.85) 78%,
+    rgba(10,35,66,0.88) 100%
   );
+  z-index: 1;
 }
+
 .hero-content {
-  position: relative; z-index: 2;
+  position: relative; z-index: 3; /* Z-index katmanı yükseltildi */
   flex: 1;
   display: flex;
   align-items: center;
@@ -461,8 +466,8 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.12); /* Opaklık artırıldı */
+  border: 1px solid rgba(255,255,255,0.25);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-full);
   padding: 8px 20px;
@@ -480,10 +485,11 @@ ul { list-style: none; }
   font-family: var(--font-ui);
   font-size: 0.76rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.88);
+  color: #ffffff; /* %88 opaklık yerine tam beyaz yapıldı */
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
+
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 5.5vw, 4rem);
@@ -492,6 +498,7 @@ ul { list-style: none; }
   line-height: 1.15;
   margin-bottom: 24px;
   animation: fadeInUp 0.7s 0.1s ease both;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); /* Okunurluk gölgesi eklendi */
 }
 .hero-title em { font-style: italic; color: var(--gold-light); }
 .hero-title .underline-accent {
@@ -506,13 +513,15 @@ ul { list-style: none; }
   background: linear-gradient(90deg, var(--turquoise), transparent);
   border-radius: 2px;
 }
+
 .hero-desc {
   font-size: 1.08rem;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.92); /* Opaklık %78'den %92'ye çıkarıldı */
   line-height: 1.85;
   margin-bottom: 44px;
   max-width: 560px;
   animation: fadeInUp 0.7s 0.2s ease both;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 .hero-actions {
   display: flex; flex-wrap: wrap; gap: 14px;
@@ -521,14 +530,14 @@ ul { list-style: none; }
 
 /* Hero Scroll */
 .hero-scroll {
-  position: relative; z-index: 2;
+  position: relative; z-index: 3;
   display: flex; justify-content: center;
   padding-bottom: 32px;
 }
 .hero-scroll-btn {
   display: flex; flex-direction: column;
   align-items: center; gap: 8px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.75); /* Opaklık artırıldı */
   font-size: 0.72rem; font-family: var(--font-ui);
   letter-spacing: 0.1em; text-transform: uppercase;
   animation: bounce 2s 1.2s infinite;
@@ -536,13 +545,13 @@ ul { list-style: none; }
 }
 .hero-scroll-btn svg { width: 22px; height: 22px; stroke: currentColor; fill: none; }
 
-/* Hero Pillars Bar (replaces stats) */
+/* Hero Pillars Bar */
 .hero-pillars {
-  position: relative; z-index: 2;
-  background: rgba(255,255,255,0.06);
+  position: relative; z-index: 3;
+  background: rgba(10, 35, 66, 0.45); /* Şeffaf beyaz yerine koyu cam efekti verildi */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.18);
 }
 .hero-pillars-inner {
   display: grid;
@@ -550,15 +559,15 @@ ul { list-style: none; }
 }
 .pillar-item {
   padding: 28px 28px;
-  border-right: 1px solid rgba(255,255,255,0.09);
+  border-right: 1px solid rgba(255,255,255,0.12);
   text-align: center;
 }
 .pillar-item:last-child { border-right: none; }
 .pillar-icon {
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.09);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 12px;
 }
@@ -569,14 +578,30 @@ ul { list-style: none; }
   font-weight: 600;
   color: var(--gold-light);
   margin-bottom: 5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .pillar-desc {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.55);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85); /* Opaklık %55'ten %85'e çıkarıldı */
   font-family: var(--font-ui);
   letter-spacing: 0.03em;
 }
 
+/* Hero Smooth Geçiş Dalgası CSS */
+.wave-divider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 56px;
+  margin-top: -1px; /* Beyaz çizgi kalmasını önlemek için mikro çakışma */
+  line-height: 0;
+  pointer-events: none;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 56px;
+}
 /* =====================================================
    ULUSAL FORUM NEDİR?
    ===================================================== */
